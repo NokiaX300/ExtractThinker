@@ -421,7 +421,7 @@ class Evaluator:
             output_path: Path to save the report
         """
         with open(output_path, 'w') as f:
-            f.write(report.json(indent=2))
+            f.write(report.model_dump_json(indent=2))
         print(f"Report saved to: {output_path}")
 
 class TeacherStudentEvaluator(Evaluator):
